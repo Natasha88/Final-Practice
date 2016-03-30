@@ -2,12 +2,9 @@
 <html>
 <head>
 	<title>IP SAFETY</title>
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
-    
-<!--     <link href="css/freelancer.css" rel="stylesheet"> -->
-
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/style.min.css" rel="stylesheet">
 </head>
 <body id="page-top">
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -87,7 +84,7 @@
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
+                <!-- Set the fourth background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('https://student.societyforscience.org/sites/student.societyforscience.org/files/main/articles/iStock_000020840098Medium.jpg');"></div>
                  <div class="carousel-caption learn">
                     <h2>IP Infringement</h2>
@@ -127,21 +124,21 @@
                 <h2 id="team" class="page-header">Our Team</h2>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/cat-boss.png" alt="">
+                <img class="img-circle img-responsive img-center" src="resources/img/cat-boss.png" alt="">
                 <h3>John Smith
                     <small>CEO</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/boss.png" alt="">
+                <img class="img-circle img-responsive img-center" src="resources/img/boss.png" alt="">
                 <h3>John Smith
                     <small>Senior Partner</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/cfo.png" alt="">
+                <img class="img-circle img-responsive img-center" src="resources/img/cfo.png" alt="">
                 <h3>John Smith
                     <small>CFO</small>
                 </h3>
@@ -256,12 +253,12 @@
            Sort by <span class="caret"></span>
           </button>
           <ul class="dropdown-menu btn-pad btn-curs">
-            <li><a>Date: new</a></li>
-            <li><a>Date: old</a></li>
-            <li><a>Name: a-z</a></li>
-            <li><a>Name: z-a</a></li>
-            <li><a>Subject: a-z</a></li>
-            <li><a>Subject: z-a</a></li>
+            <li><a id="dateNew">Date: new</a></li>
+            <li><a id="dateOld">Date: old</a></li>
+            <li><a id="nameA">Name: a-z</a></li>
+            <li><a id="nameZ">Name: z-a</a></li>
+            <li><a id="subjA">Subject: a-z</a></li>
+            <li><a id="subjZ">Subject: z-a</a></li>
           </ul>
         </div>
         </div>
@@ -273,21 +270,24 @@
             <div class="well">
             <h4>Leave your review</h4>
             <form role="form" class="clearfix">
-                <div class="col-md-6 form-group">
+                <div id="nameErr" class="col-md-6 form-group">
                     <label class="sr-only" for="name">Name</label>
                     <input required type="text" class="form-control" id="name" placeholder="Name">
+                    <span id="nameTextErr" class="commErrHide">* Fill this area</span>
                 </div>
-                <div class="col-md-6 form-group">
+                <div id="subjErr" class="col-md-6 form-group">
                     <label class="sr-only" for="subj">Subject</label>
                     <input required type="text" class="form-control" id="subj" placeholder="Subject">
+                    <span id="subjTextErr" class="commErrHide">* Fill this area</span>
                 </div>
-                <div class="col-md-12 form-group">
+                <div id="textErr" class="col-md-12 form-group">
                     <label class="sr-only" for="review">Review</label>
-                    <textarea class="form-control" id="review" placeholder="Enter text here" required ></textarea>
+                    <textarea required class="form-control" id="review" placeholder="Enter text here"></textarea>
+                    <span id="comTextErr"class="commErrHide">* Fill this area</span>
                 </div>
                 <div class="col-md-12 form-group text-right">
                 <button type="reset" class="btn btn-default">Clear</button>
-                <button type="submit" id="create" class="btn btn-primary">Send</button>
+                <button type="reset" id="create" class="btn btn-primary">Send</button>
                 </div>
             </form>
             </div>
@@ -347,7 +347,7 @@
                         <div class="modal-body">
                             <h2>Copyrights</h2>
                             <hr class="">
-                            <img class="img-center" src="img/copyright.png" class="img-responsive img-centered" alt="Copyrights">
+                            <img class="img-center" src="resources/img/copyright.png" class="img-responsive img-centered" alt="Copyrights">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas massa. Nullam iaculis tortor eu lorem consectetur, sed semper libero fermentum. Phasellus justo dolor, finibus ac ligula posuere, auctor iaculis justo. Donec sodales auctor neque, sed tincidunt erat malesuada in. Vestibulum lacinia viverra mollis. Curabitur ut placerat arcu. Pellentesque faucibus sem at justo accumsan aliquet. Nulla ligula arcu, elementum quis tortor vitae, vulputate pulvinar lectus. Duis sagittis feugiat feugiat. Integer ex dolor, tempor sit amet tincidunt vel, posuere ac ligula. Vivamus nibh augue, interdum nec aliquet a, bibendum at nulla. Integer volutpat venenatis magna, nec vehicula mauris varius eu. Proin lacinia varius arcu et pellentesque. Phasellus est leo, ultrices sed faucibus non, tempus eget libero. Vivamus at malesuada magna. Praesent vitae tellus sit amet ante venenatis lacinia.</p>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sem in magna ultrices lacinia et sed quam. Donec vel dolor ultrices, suscipit libero a, dapibus felis. Pellentesque ac massa non mauris ultricies laoreet at sed libero.Ut a metus eget ligula rhoncus blandit sit amet a libero.</li>
@@ -388,7 +388,7 @@
                         <div class="modal-body">
                             <h2>Patents</h2>
                             <hr class="">
-                            <img class="img-center" src="img/patents.png" class="img-responsive img-centered" alt="Patents">
+                            <img class="img-center" src="resources/img/patents.png" class="img-responsive img-centered" alt="Patents">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas massa. Nullam iaculis tortor eu lorem consectetur, sed semper libero fermentum. Phasellus justo dolor, finibus ac ligula posuere, auctor iaculis justo. Donec sodales auctor neque, sed tincidunt erat malesuada in. Vestibulum lacinia viverra mollis. Curabitur ut placerat arcu. Pellentesque faucibus sem at justo accumsan aliquet. Nulla ligula arcu, elementum quis tortor vitae, vulputate pulvinar lectus. Duis sagittis feugiat feugiat. Integer ex dolor, tempor sit amet tincidunt vel, posuere ac ligula. Vivamus nibh augue, interdum nec aliquet a, bibendum at nulla. Integer volutpat venenatis magna, nec vehicula mauris varius eu. Proin lacinia varius arcu et pellentesque. Phasellus est leo, ultrices sed faucibus non, tempus eget libero. Vivamus at malesuada magna. Praesent vitae tellus sit amet ante venenatis lacinia.</p>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sem in magna ultrices lacinia et sed quam. Donec vel dolor ultrices, suscipit libero a, dapibus felis. Pellentesque ac massa non mauris ultricies laoreet at sed libero.Ut a metus eget ligula rhoncus blandit sit amet a libero.</li>
@@ -429,7 +429,7 @@
                         <div class="modal-body">
                             <h2>Trademarks</h2>
                             <hr class="">
-                            <img class="img-center" src="img/trademark.png" class="img-responsive img-centered" alt="Trademarks">
+                            <img class="img-center" src="resources/img/trademark.png" class="img-responsive img-centered" alt="Trademarks">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas massa. Nullam iaculis tortor eu lorem consectetur, sed semper libero fermentum. Phasellus justo dolor, finibus ac ligula posuere, auctor iaculis justo. Donec sodales auctor neque, sed tincidunt erat malesuada in. Vestibulum lacinia viverra mollis. Curabitur ut placerat arcu. Pellentesque faucibus sem at justo accumsan aliquet. Nulla ligula arcu, elementum quis tortor vitae, vulputate pulvinar lectus. Duis sagittis feugiat feugiat. Integer ex dolor, tempor sit amet tincidunt vel, posuere ac ligula. Vivamus nibh augue, interdum nec aliquet a, bibendum at nulla. Integer volutpat venenatis magna, nec vehicula mauris varius eu. Proin lacinia varius arcu et pellentesque. Phasellus est leo, ultrices sed faucibus non, tempus eget libero. Vivamus at malesuada magna. Praesent vitae tellus sit amet ante venenatis lacinia.</p>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sem in magna ultrices lacinia et sed quam. Donec vel dolor ultrices, suscipit libero a, dapibus felis. Pellentesque ac massa non mauris ultricies laoreet at sed libero.Ut a metus eget ligula rhoncus blandit sit amet a libero.</li>
@@ -470,7 +470,7 @@
                         <div class="modal-body">
                             <h2>IP Infringement</h2>
                             <hr class="">
-                            <img class="img-center" src="img/infig.png" class="img-responsive img-centered" alt="IP Infringement">
+                            <img class="img-center" src="resources/img/infig.png" class="img-responsive img-centered" alt="IP Infringement">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas massa. Nullam iaculis tortor eu lorem consectetur, sed semper libero fermentum. Phasellus justo dolor, finibus ac ligula posuere, auctor iaculis justo. Donec sodales auctor neque, sed tincidunt erat malesuada in. Vestibulum lacinia viverra mollis. Curabitur ut placerat arcu. Pellentesque faucibus sem at justo accumsan aliquet. Nulla ligula arcu, elementum quis tortor vitae, vulputate pulvinar lectus. Duis sagittis feugiat feugiat. Integer ex dolor, tempor sit amet tincidunt vel, posuere ac ligula. Vivamus nibh augue, interdum nec aliquet a, bibendum at nulla. Integer volutpat venenatis magna, nec vehicula mauris varius eu. Proin lacinia varius arcu et pellentesque. Phasellus est leo, ultrices sed faucibus non, tempus eget libero. Vivamus at malesuada magna. Praesent vitae tellus sit amet ante venenatis lacinia.</p>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sem in magna ultrices lacinia et sed quam. Donec vel dolor ultrices, suscipit libero a, dapibus felis. Pellentesque ac massa non mauris ultricies laoreet at sed libero.Ut a metus eget ligula rhoncus blandit sit amet a libero.</li>
@@ -558,15 +558,14 @@
         </div>
         </div>
 
-
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="moment/moment.js"></script>
-    <script src="js/built.js"></script>
-
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/jquery.easing.min.js"></script>
+    <script src="resources/js/wow.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    // <script src="resources/js/built.min.js"></script>
+<!--     // <script src="dev/js/built.js"></script>
+ -->
    <!--  Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

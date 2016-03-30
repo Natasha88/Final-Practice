@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         main: 
         {
           files: {
-              "css/style.css": "less/style.less"
+              "resources/css/style.css": "dev/less/style.less"
           }
         }        
     },
@@ -14,9 +14,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'css',
+          cwd: 'resources/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'css',
+          dest: 'resources/css',
           ext: '.min.css'
         }]
       }
@@ -26,14 +26,22 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['js/xhr_utils.js', 'js/comments.js', 'js/form.js', "js/creative.js"],
-        dest: 'js/built.js',
+        src: ['dev/js/xhr_utils.js', 'dev/js/comments.js', "dev/js/creative.js"],
+        dest: 'dev/js/built.js',
       },
+    },
+    uglify: {
+      my_target: {
+        files: {
+          'resources/js/built.min.js': ['dev/js/built.js']
+        }
+      }
     }
 
   });
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.registerTask('default', ['less', "cssmin", "concat"]);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', ['less', "cssmin", "concat", "uglify"]);
 };
